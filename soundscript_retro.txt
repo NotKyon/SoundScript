@@ -1,0 +1,11 @@
+// SoundScript: Retro
+
+var y
+var x = 0.2 + frac( T )*0.6
+//var x = T*pi
+
+//y  = clamp((sin(w*phase)), -0.5, 0.5)*exp(-1.87*T);
+y = tri(0.25, w*phase)*exp(-3*T)
+//y *= clamp((1.0 - (t - 0.01))*16.0, -1.0, 1.0)*(1.0 - t);
+
+return y

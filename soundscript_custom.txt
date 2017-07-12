@@ -1,0 +1,12 @@
+// SoundScript: Custom Sound
+
+let t1 =      t + 0.0125
+let t2 = max( t - 0.0125, 0.0 )
+
+var y = ( 0.006*w*t*exp( 1 - 0.006*w*t ) )*sin( w*t )*exp( -5*t )
+y += 0.5*cos( w*t1 )*exp( -5*t2 )
+
+let acc = saturate( ( t/0.1 )^0.5 )
+// acc = 7    // uncomment to show error
+
+return acc*y*( 1.0 - t*t )

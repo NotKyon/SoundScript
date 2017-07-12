@@ -1,0 +1,3 @@
+// SoundScript: Sine
+
+return sin(w*phase)*exp(-5*T)
